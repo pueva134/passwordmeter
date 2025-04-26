@@ -1,0 +1,117 @@
+/* Add gradient background for fun effect */
+body {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient effect */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Confetti styles */
+.confetti {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: gold;
+    border-radius: 50%;
+    opacity: 0.9;
+    animation: confettiFall linear infinite;
+}
+
+/* Animation for falling confetti */
+@keyframes confettiFall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+    }
+}
+
+/* Form Container Styling */
+.main-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Password Strength Meter */
+.strength-meter {
+    position: relative;
+    height: 10px;
+    background-color: #e0e0e0;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.strength-meter-fill {
+    height: 100%;
+    width: 0;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+.strength-weak {
+    background-color: red;
+    width: 25%;
+}
+
+.strength-fair {
+    background-color: orange;
+    width: 50%;
+}
+
+.strength-good {
+    background-color: yellowgreen;
+    width: 75%;
+}
+
+.strength-strong {
+    background-color: green;
+    width: 100%;
+}
+
+.password-count {
+    margin-top: 10px;
+}
+
+.btn-primary {
+    background-color: #ff7e5f; /* Matching button color */
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #feb47b;
+}
+
+/* Popup message styling */
+.popup-message {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    display: none;
+    z-index: 9999;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
